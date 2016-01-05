@@ -1,0 +1,21 @@
+
+
+{% block sidebar %}
+
+<ul>
+	<li><a href="/home/"></a></li>
+</ul>
+
+{% endblock %}
+
+{% block content %}
+<form action=''   method= "POST"  enctype="multipart/formdata" name = 'articles'>
+{% csrf_token%}
+<ul>
+	{{form.as_ul }}
+</ul>
+
+<input type= "submit" name ="submit" value= "Upload">
+
+</form>
+{% endblock %}
